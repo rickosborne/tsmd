@@ -74,6 +74,9 @@
 		"prettier": ">=3"
 	},
 	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
 	"readme": "README.md",
 	"repository": {
 		"type": "git",
@@ -81,5 +84,6 @@
 	},
 	"type": "module",
 	"types": "./index.d.ts",
+	"typings": "./index.d.ts",
 	"version": "2025.8.29"
 }
