@@ -232,3 +232,25 @@ Let's face it: `import` blocks probably aren't going to help someone understand 
 For that reason, they can be put anywhere in your `.ts.md` file, even at the very end, and don't need an `id`.
 
 Any fenced code blocks which contain only `import` statements and newlines will be hoisted to the top of the virtual TypeScript file.
+
+## To Do
+
+In no particular order:
+
+- [ ] TypeScript language service plugin
+- [ ] Watch mode
+- [ ] Edit-Both mode
+- [ ] WebPack plugin?
+- [ ] Document esbuild plugin
+- [ ] Unit tests for source maps
+- [ ] Option to write out explicit region comments
+- [ ] Figure out Prettier issues
+- [ ] Biome support
+- [ ] Remove dead ts-standard code
+- [ ] Convert sources to `.ts.md` and self-host (self-hoist?)
+- [ ] Unit tests for assembler
+
+## Version history
+
+- `v2025.8.29` \
+  Initial release. Very rudimentary functionality. But it does work!

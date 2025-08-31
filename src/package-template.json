@@ -58,7 +58,7 @@
 			"default": "./register-hooks-sync.mjs"
 		}
 	},
-	"homepage": "https://github.com/rickosborne/mdts",
+	"homepage": "https://github.com/rickosborne/tsmd",
 	"keywords": [
 		"typescript",
 		"markdown",
