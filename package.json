@@ -12,6 +12,7 @@
 	"description": "Node.js loader for .ts.md literate TypeScript + Markdown",
 	"devDependencies": {
 		"@eslint/js": "9.34.0",
+		"@rickosborne/term": "2025.8.28",
 		"@rickosborne/typical": "2025.8.28",
 		"@stylistic/eslint-plugin": "5.2.3",
 		"@types/chai": "5.2.2",
