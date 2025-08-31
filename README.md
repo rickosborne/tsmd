@@ -4,12 +4,6 @@ Node.js loader for `.ts.md` literate TypeScript + Markdown files.
 Put your TypeScript code inside your docs instead of the other way around:
 
 ``````markdown
----
-tsmd:
-	formatter: prettier
-	root: true
----
-
 # Fibonacci
 
 Generate for Fibonacci numbers as an infinite sequence.
@@ -90,13 +84,41 @@ This file is then passed along to the rest of the loaders.
 If your file was named `fibonacci.ts.md`, then the virtual file looks like `fibonacci.ts`.
 The same holds true for other TS extensions like `.tsx`, `.cts`, and `.mts`, etc.
 
+It also works with vanilla JS in `.js.md`, `.mjs.md`, etc.
+
 ## Usage
 
-In modern versions of node:
+In modern versions of node (v20+), when using Javascript:
 
 ```shell
-node --loader @rickosborne/tsmd path/to/some.ts.md
+node --import @rickosborne/tsmd path/to/some.js.md
 ```
+
+If you're still using node v18 or CommonJS, this might work better:
+
+```shell
+node --require @rickosborne/tsmd path/to/some.cjs.md
+```
+
+When using TypeScript instead of JS, you can also include `tsx`:
+
+```shell
+node --import=@rickosborne/tsmd --import=tsx path/to/some.ts.md
+```
+
+Which is equivalent to:
+
+```shell
+tsx --import=@rickosborne/tsmd path/to/some.ts.md
+```
+
+There is _maybe_ some support for the old `--loader` syntax, but YMMV:
+
+```shell
+tsx --loader=@rickosborne/tsmd/loader-async path/to/some.ts.md
+```
+
+You can see a bunch of variations on this in `integration/fib/package.json` in the `scripts` block.
 
 It should also work with tools which take a similarly-formatted `loader` name in their configuration, like Mocha or WebPack.
 
@@ -144,7 +166,7 @@ The magic there is the leading `// ...` and trailing `...`.
 (The Unicode `…`, `᠁`, and `⋯` are also acceptable, if you prefer.)
 The text in between becomes a Region ID reference.
 
-You can also use `/* … block … */` comments, but the parse will only find them if the entire comment is single-line.
+You can also use `/* … block … */` comments, but the parser will only find them if the entire comment is single-line.
 That is, references will not be picked up if they are in, for example, JSDoc/TSDoc:
 
 ```typescript
