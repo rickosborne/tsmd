@@ -1,0 +1,84 @@
+{
+	"$schema": "https://www.schemastore.org/package.json",
+	"author": {
+		"name": "Rick Osborne",
+		"url": "https://rickosborne.org"
+	},
+	"dependencies": {
+		"@rickosborne/foundation": "2025.8.28",
+		"@rickosborne/guard": "2025.8.28",
+		"source-map": "0.7.6",
+		"yaml": "2.8.1"
+	},
+	"description": "Node.js loader for .ts.md literate TypeScript + Markdown",
+	"engines": {
+		"node": ">=18"
+	},
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"import": "./register-hooks-sync.mjs",
+			"require": "./register-hooks-sync.cjs",
+			"default": "./register-hooks-sync.mjs"
+		},
+		"./loader-async": {
+			"types": "./loader-async.d.ts",
+			"import": "./loader-async.mjs",
+			"require": "./loader-async.cjs",
+			"default": "./loader-async.mjs"
+		},
+		"./loader-sync": {
+			"types": "./loader-sync.d.ts",
+			"import": "./loader-sync.mjs",
+			"require": "./loader-sync.cjs",
+			"default": "./loader-sync.mjs"
+		},
+		"./register": {
+			"types": "./register-async.d.ts",
+			"import": "./register-async.mjs",
+			"require": "./register-hooks-sync.cjs",
+			"default": "./register-async.mjs"
+		},
+		"./register-async": {
+			"types": "./register-async.d.ts",
+			"import": "./register-async.mjs",
+			"require": "./register-async.cjs",
+			"default": "./register-async.mjs"
+		},
+		"./register-sync": {
+			"types": "./register-sync.d.ts",
+			"import": "./register-sync.mjs",
+			"require": "./register-sync.cjs",
+			"default": "./register-sync.mjs"
+		},
+		"./register-hooks": {
+			"types": "./register-hooks-sync.d.ts",
+			"import": "./register-hooks-sync.mjs",
+			"require": "./register-hooks-sync.cjs",
+			"default": "./register-hooks-sync.mjs"
+		}
+	},
+	"homepage": "https://github.com/rickosborne/mdts",
+	"keywords": [
+		"typescript",
+		"markdown",
+		"literate"
+	],
+	"license": "CC-BY-NC-SA-4.0",
+	"main": "./loader-sync.cjs",
+	"module": "./loader-sync.mjs",
+	"name": "@rickosborne/tsmd",
+	"optionalDependencies": {
+		"@biomejs/biome": ">=2",
+		"eslint": ">=9",
+		"prettier": ">=3"
+	},
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rickosborne/tsmd.git"
+	},
+	"type": "module",
+	"types": "./index.d.ts",
+	"version": "2025.8.29"
+}

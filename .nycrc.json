@@ -1,0 +1,13 @@
+{
+	"all": false,
+	"check-coverage": true,
+	"exclude": [
+		"node_modules/**",
+		"**/*.test.ts",
+		"**/.*.js",
+		"**/__test__/**"
+	],
+	"extension": [
+		".ts"
+	]
+}

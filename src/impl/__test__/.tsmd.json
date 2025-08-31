@@ -1,0 +1,6 @@
+{
+	"$schema": "../../tsmd-config.schema.json",
+	"eslintConfigPath": "../../../../eslint.config.js",
+	"formatter": "none",
+	"root": true
+}

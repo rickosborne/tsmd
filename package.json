@@ -1,0 +1,78 @@
+{
+	"author": {
+		"name": "Rick Osborne",
+		"url": "https://rickosborne.org"
+	},
+	"dependencies": {
+		"@rickosborne/foundation": "2025.8.28",
+		"@rickosborne/guard": "2025.8.28",
+		"source-map": "0.7.6",
+		"yaml": "2.8.1"
+	},
+	"description": "Node.js loader for .ts.md literate TypeScript + Markdown",
+	"devDependencies": {
+		"@eslint/js": "9.34.0",
+		"@rickosborne/typical": "2025.8.28",
+		"@stylistic/eslint-plugin": "5.2.3",
+		"@types/chai": "5.2.2",
+		"@types/mocha": "10.0.10",
+		"@types/node": "24.3.0",
+		"chai": "6.0.1",
+		"esbuild": "0.25.9",
+		"eslint": "9.34.0",
+		"eslint-plugin-jsonc": "2.20.1",
+		"eslint-plugin-markdown": "5.1.0",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-sort-keys-fix": "1.1.2",
+		"eslint-plugin-tsdoc": "0.4.0",
+		"globals": "16.3.0",
+		"mocha": "11.7.1",
+		"npm-check-updates": "18.0.3",
+		"pkg-types": "2.3.0",
+		"rimraf": "6.0.1",
+		"tsx": "4.20.5",
+		"typescript": "5.9.2",
+		"typescript-eslint": "8.41.0"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/loader.d.ts",
+			"import": "./dist/loader.mjs",
+			"default": "./dist/loader.mjs"
+		}
+	},
+	"homepage": "https://github.com/rickosborne/mdts",
+	"keywords": [
+		"typescript",
+		"markdown",
+		"literate"
+	],
+	"license": "CC-BY-NC-SA-4.0",
+	"main": "./dist/loader-sync.cjs",
+	"module": "./dist/index.mjs",
+	"name": "@rickosborne/tsmd",
+	"optionalDependencies": {
+		"@biomejs/biome": ">=2",
+		"eslint": ">=9",
+		"prettier": ">=3"
+	},
+	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rickosborne/tsmd.git"
+	},
+	"scripts": {
+		"build": "tsx scripts/build.ts",
+		"build:types": "tsc -p tsconfig.dts.json",
+		"lint": "eslint",
+		"test": "mocha",
+		"type-check": "tsc --noEmit",
+		"upgrade:check": "npm-check-updates"
+	},
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"version": "2025.8.29"
+}

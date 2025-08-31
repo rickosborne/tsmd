@@ -1,0 +1,51 @@
+{
+	"$comment": "The config file is named: .tsmd.json",
+	"$id": "https://rickosborne.org/tsmd/v1/tsmd-config.schema.json",
+	"$schema": "https://json-schema.org/draft-07/schema",
+	"description": "Config file format for tsmd",
+	"properties": {
+		"$schema": {
+			"$comment": "This is ignored, but allowed, and is there to help your editor provide autocomplete and hints.",
+			"default": "https://rickosborne.org/tsmd/v1/tsmd-config.schema.json",
+			"description": "JSON Schema URI for this configuration file.",
+			"type": "string"
+		},
+		"allowOmitLanguage": {
+			"$comment": "If false, an error will be thrown while parsing the file.",
+			"default": true,
+			"description": "Whether to allow fenced code blocks with no language specifier.",
+			"type": "boolean"
+		},
+		"defaultLanguage": {
+			"default": "typescript",
+			"description": "The default language to assume when reading a fenced code block with no language specifier.",
+			"enum": [
+				"typescript",
+				"javascript"
+			],
+			"type": "string"
+		},
+		"eslintConfigPath": {
+			"description": "Optional path to eslint configuration file.",
+			"type": "string"
+		},
+		"formatter": {
+			"default": "none",
+			"description": "Third-party formatter to use when generating virtual source.",
+			"enum": [
+				"none",
+				"biome",
+				"prettier",
+				"eslint",
+				"ts-standard"
+			],
+			"type": "string"
+		},
+		"root": {
+			"default": true,
+			"description": "Whether the configuration loader should stop at the current directory (true) or continue up the directory path to find more configuration files (false).",
+			"type": "boolean"
+		}
+	},
+	"type": "object"
+}
