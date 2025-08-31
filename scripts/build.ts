@@ -36,6 +36,7 @@ const build = async () => {
 	});
 	await repackage(builtSources, projectRoot, srcDir, distDir);
 	// await writeFile(pathJoin(distDir, "index.d.ts"), indexDTS, "utf-8");
+	await copyFile("README.md", pathJoin(distDir, "README.md"));
 };
 
 build().catch(catchAnd({

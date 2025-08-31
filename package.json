@@ -60,6 +60,7 @@
 		"prettier": ">=3"
 	},
 	"private": false,
+	"readme": "README.md",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/rickosborne/tsmd.git"
