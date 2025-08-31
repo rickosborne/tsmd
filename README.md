@@ -249,6 +249,7 @@ In no particular order:
 - [ ] Remove dead ts-standard code
 - [ ] Convert sources to `.ts.md` and self-host (self-hoist?)
 - [ ] Unit tests for assembler
+- [ ] Automation for release version commits and tagging
 
 ## Version history
 
